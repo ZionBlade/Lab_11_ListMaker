@@ -13,9 +13,9 @@ public class listTesting {
         boolean resp;
         int item = 0;
 
-
-        list.add("Oreo");
-        list.add("cookie");
+//
+//        list.add("Oreo");
+//        list.add("cookie");
 
         displayList();
 
@@ -58,7 +58,7 @@ public class listTesting {
 
     private static void displayList()
     {
-        System.out.print("\n**********************************************************");
+        System.out.println("\n**********************************************************");
         if(list.size() != 0)
         {
             for(int i = 0; i < list.size(); i++)
@@ -67,7 +67,7 @@ public class listTesting {
             }
         }
         else {
-            System.out.println("***                    list is empty                   ***");
+            System.out.println("\n***                    list is empty                   ***");
         }
         System.out.print("\n**********************************************************");
 
