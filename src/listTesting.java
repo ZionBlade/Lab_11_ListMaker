@@ -30,11 +30,21 @@ public class listTesting {
             switch(cmd)
             {
                 case "A" :
-                    cmd = SafeInput.getNonZeroLenString(console, "enter what you want to add: ");
-                    list.add(cmd);
+                    if(list.size() != 0)
+                    {
+                        item = SafeInput.getRangedInt(console, "Enter where you want to insert the item", 1, (list.size() +1));
+                        item--;
+                        cmd = SafeInput.getNonZeroLenString(console, "enter what you want to add");
+                        list.add(item, cmd);
+                    }
+                    else
+                    {
+                        cmd = SafeInput.getNonZeroLenString(console, "enter what you want to add");
+                        list.add(cmd);
+                    }
                     break;
                 case "D" :
-                    item = SafeInput.getInt(console, "Enter the list number that you want to delete");
+                    item = SafeInput.getRangedInt(console, "enter the list number that you want to delete", 1, (list.size() + 1));
                     item--;
                     list.remove(item);
                     break;
